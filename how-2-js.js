@@ -1,2 +1,1 @@
-console.log('Hello World')
-//[1] 8297
+console.log('Hello World');
