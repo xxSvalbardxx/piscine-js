@@ -1,14 +1,7 @@
-const person = {
-    age: 27,
-    country: 'India'
-}
-
-
-
 
 const clone1 = Object.assign({}, person);
 const clone2 = Object.assign({}, person);
-const sameperson = person;
+const samePerson = person;
 
-sameperson.age += 1;
-sameperson.country = 'FR';
+samePerson.age += 1;
+samePerson.country = 'FR';
