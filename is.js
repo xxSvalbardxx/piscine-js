@@ -1,6 +1,6 @@
 const is = {
     num : (x) => typeof x === 'number' ? true : false, 
-    NaN : (x) => typeof x === 'NaN' ? true : false,
+    nan : (x) => typeof x === 'NaN' ? true : false,
     str : (x) => typeof x === 'string' ? true : false,
     bool : (x) => typeof x === 'boolean' ? true : false,
     undef : (x) => typeof x === 'undefined' ? true : false,
