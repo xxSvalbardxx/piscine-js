@@ -35,10 +35,7 @@ const mapToObj = (map) => {
 }
 const objToArr = (obj) => {
     if (typeof obj === 'object' && !Array.isArray(obj) && obj !== null ){
-        for (const [key, value] of Object.entries(obj)) {
-            return (`${key}: ${value}`);
-          }
-          
+        return Object.values(obj);
     }
 }
 const objToMap = (obj) => {
