@@ -7,7 +7,7 @@ const getAcceleration = (object) => {
         } else if ((object.Δv && object.Δt)&& (typeof object.Δv === 'number' && typeof object.Δt === 'number')){
             return object.Δv / object.Δt;
         } else if ((object.t && object.d)&& (typeof object.t === 'number' && typeof object.d === 'number')){
-            return (object.d * 2)/ (object.t^2);
+            return (object.d * 2)/ (object.t * object.t);
         } else {
             return 'impossible';
         }
