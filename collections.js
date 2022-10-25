@@ -50,7 +50,7 @@ const arrToObj = (arr) => {
 };
 const strToObj = (str) => {
   if (typeof str === "string") {
-    return JSON.parse(JSON.stringify(str));
+    return strToArr(arrToObj(str));
   }
 };
 const superTypeOf = (data) => {
