@@ -1,18 +1,12 @@
-const object = {}
-object.f = 0;
-object.m = 0;
-object.Δv = 0;
-object.Δt = 0;
-object.t = 0;
-object.d = 0;
 
 const getAcceleration = (object) => {
+    
     if (typeof object === 'object' && !Array.isArray(object) && object !== null){
-        if (object.f && object.m){
+        if ((object.f && object.m)&& (typeof object.f === 'number' && typeof object.m === 'number')){
             return object.f / object.m;
-        } else if (object.Δv && object.Δt){
+        } else if ((object.Δv && object.Δt)&& (typeof object.Δv === 'number' && typeof object.Δt === 'number')){
             return object.Δv / object.Δt;
-        } else if (object.t && object.d){
+        } else if ((object.t && object.d)&& (typeof object.t === 'number' && typeof object.d === 'number')){
             return (object.d * 2)/ (object.t^2);
         } else {
             return 'impossible';
