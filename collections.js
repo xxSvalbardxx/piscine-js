@@ -45,7 +45,7 @@ const objToMap = (obj) => {
 }
 const arrToObj = (arr) => {
     if (arr instanceof Array){
-       return Object.assign({}, names);
+       return Object.assign({}, arr);
     }
 }
 const strToObj = (str) => {
