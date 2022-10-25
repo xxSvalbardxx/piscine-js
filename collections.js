@@ -56,7 +56,7 @@ const strToObj = (str) => {
   }
 };
 const superTypeOf = (data) => {
-  
+
 if (data instanceof Map) {
     return "Map";
 } else if (data instanceof Set) {
@@ -71,7 +71,7 @@ if (data instanceof Map) {
     return "Number";
 } else if (data instanceof Array) {
     return "Array";
-} else if (typeof data === null) {
+} else if ( data === null) {
     return "null";
 } else if (typeof data === "undefined") {
     return "undefined";  
