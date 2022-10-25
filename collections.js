@@ -50,7 +50,9 @@ const arrToObj = (arr) => {
 };
 const strToObj = (str) => {
   if (typeof str === "string") {
-    return strToArr(arrToObj(str));
+    let arr = strToArr(str);
+    let obj = arrToObj(arr);
+    return obj;
   }
 };
 const superTypeOf = (data) => {
