@@ -11,4 +11,3 @@ const is = {
     truthy : (x) => x ? true : false,
     falsy : (x) => !x ? true : false,
 }
-
