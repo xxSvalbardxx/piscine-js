@@ -7,7 +7,7 @@ object.t = 0;
 object.d = 0;
 
 const getAcceleration = (object) => {
-    if (typeof x === 'object' && !Array.isArray(x) && x !== null){
+    if (typeof object === 'object' && !Array.isArray(object) && object !== null){
         if (object.f && object.m){
             return object.f / object.m;
         } else if (object.Δv && object.Δt){
