@@ -45,7 +45,7 @@ const objToMap = (obj) => {
 };
 const arrToObj = (arr) => {
   if (arr instanceof Array) {
-    return {...arr};
+    return { ...arr };
   }
 };
 const strToObj = (str) => {
@@ -54,21 +54,26 @@ const strToObj = (str) => {
   }
 };
 const superTypeOf = (data) => {
-  if (data instanceof Array) {
-    return "array";
-  } else if (data instanceof Set) {
-    return "set";
-  } else if (typeof data === "string") {
-    return "string";
-  } else if (
-    typeof data === "object" &&
-    !Array.isArray(data) &&
-    data !== null
-  ) {
-    return "object";
-  } else if (data instanceof Map) {
-    return "map";
-  } else {
-    return "unknown";
-  }
+  
+if (data instanceof Map) {
+    return "Map";
+} else if (data instanceof Set) {
+    return "Set";
+} else if ( typeof data === "object" && !Array.isArray(data) && data !== null) {
+    return "Object";
+} else if (typeof data === "string") {
+    return "String";
+} else if (typeof data === "number" && !isNaN(data)) {
+    return "Number";
+} else if (typeof data === "number" && isNaN(data)) {
+    return "Number";
+} else if (data instanceof Array) {
+    return "Array";
+} else if (typeof data === null) {
+    return "null";
+} else if (typeof data === "undefined") {
+    return "undefined";  
+} else if (typeof data === "function") {
+    return "Function";
+}
 };
