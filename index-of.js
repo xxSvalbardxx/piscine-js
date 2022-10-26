@@ -11,9 +11,9 @@ const indexOf = (arr, value, index = 0) => {
 };
 
 const lastIndexOf = (arr, value, index = 0) => {
-    for (let i = index; i >= 0; i--) {
+    for (let i = arr.length - 1; i >= index; i--) {
         if (arr[i] === value) {
-        return i;
+            return i;
         }
     }
     return -1;
@@ -26,4 +26,4 @@ const includes = (arr, value) => {
     }
     return false;
 };
-console.log(lastIndexOf(['t', 0, 0, 't'], 't', 2));
+console.log(lastIndexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2));
