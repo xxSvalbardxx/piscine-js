@@ -11,7 +11,7 @@ const keepFirstLast = (str) =>{
     }
 }; 
 
-
+/*
 const str = 'abcdef';
 console.log('cFirst  '+cutFirst(str));
 console.log('cLast  '+cutLast(str));
@@ -19,3 +19,4 @@ console.log('cFL  '+cutFirstLast(str));
 console.log('kF  '+keepFirst(str));
 console.log('kL  '+keepLast(str));
 console.log('kFL  '+keepFirstLast(str));
+*/
