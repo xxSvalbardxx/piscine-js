@@ -43,7 +43,7 @@ const modulo = (a, b) => {
 
     var quo = Math.abs(a);
     var den = Math.abs(b);
-   
+    var positiveSign = (b > 0 && a > 0) || (b < 0 && a < 0);
     var res = 0;
     var arr = [den];
 
@@ -60,7 +60,7 @@ const modulo = (a, b) => {
     }
   }
 
-  return quo;
+  return positiveSign ? quo : -quo;
 }
 console.log(multiply(-22, 123));
 console.log(divide(10, 3));
