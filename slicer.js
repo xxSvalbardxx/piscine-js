@@ -9,11 +9,11 @@ const slice = (str, start = 0, end = str.length) => {
     return newStr;
   } else if (start < 0) {
         for (let j = end + start; j < end; j++) {
-            (newStr += str[i]);
+            (newStr += str[j]);
         }
     return newStr;
   }
 };
 
 console.log(slice('abcdef', 0, 2));
-console.log(slice('abcdef', 2));
+console.log(slice('abcdef', -2));
