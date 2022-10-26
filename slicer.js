@@ -1,10 +1,15 @@
-const slice = (arr, start = 0) => {
+const slice = (arr, limit = 0) => {
+  let newArr = "";
+  if (limit >= 0) {
     
-    let newArr = '';
-    for (let i = start; i < arr.length; i++) {
-        newArr += arr[i];
+    for (let i = limit; i < arr.length; i++) {
+        (newArr += arr[i]);
     }
     return newArr;
-}
-console.log(slice('abcdef', 2));
-console.log(slice(['e','f','r','y','h'], 2));
+  } else if (limit < 0) {
+    for (let i = arr.length + limit; i < arr.length; i++) {
+        (newArr += arr[i]);
+    }
+    return newArr;
+  }
+};
