@@ -60,7 +60,7 @@ const modulo = (a, b) => {
     }
   }
 
-  return positiveSign ? quo : -quo;
+  return quo;
 }
 console.log(multiply(-22, 123));
 console.log(divide(10, 3));
