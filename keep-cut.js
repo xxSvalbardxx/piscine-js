@@ -4,7 +4,7 @@ const cutFirstLast = (str) => str.slice(2, -2);
 const keepFirst = (str) => str.slice(0, 2);
 const keepLast = (str) => str.slice(-2, str.length);
 const keepFirstLast = (str) =>{
-    if (str.length > 4) {
+    if (str.length >= 4) {
         str.slice(0, 2) + str.slice(-2, str.length);
     } else {
         return str;
