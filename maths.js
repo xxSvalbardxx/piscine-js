@@ -1,3 +1,12 @@
+// Create 3 functions which each take (a, b) as arguments:
+
+// multiply that acts like the * operator, without using it.
+// divide that acts like the integer division operator /, without using it.
+// modulo that acts like the % operator, without using it.
+
+// The functions should return the result of the operation.
+
+// You can use the Math object, but not the * or / or % operators.
 
 const multiply = (a, b) => {
     let result = 0;
