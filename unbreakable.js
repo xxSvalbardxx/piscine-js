@@ -1,28 +1,32 @@
-const split = (str= "", delim) => {
+const split = (str, delim) => {
    
+    newDelim = delim;
     let arr = [];
     let word = "";
+    console.log(str)
+    
     str = str.replaceAll(delim, " ");
+
+    console.log(str)
 
     delim = " ";
     for (let i = 0; i < str.length; i++) {
+       
         if (str[i] != delim) {
             word += str[i];
-        } else {
-            if (word != ""){
-                arr.push(word);
-            }
+        } else {        
+            arr.push(word);
             word = "";
         }
-
     }
-    if (word != ""){
-        arr.push(word);
+    arr.push(word);
+    if (newDelim == "") {
+        arr.shift();
+        arr.pop();
     }
-    
     return arr;
 }
-
+console.log(split('ee,ff,g,', ','));
 console.log(split('Riad', ''));
 
 const join = (arr, concatStr) => {
