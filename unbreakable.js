@@ -6,7 +6,7 @@ const split = (str, delim) => {
         if (str[i] !== delim) {
             word += str[i];
         } else {
-            arr.push(word + ',');
+            arr.push(word);
             word = "";
         }
     }
