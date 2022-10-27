@@ -5,7 +5,7 @@ function round(n) {
         neg = true;
     }
 
-    reste = mod( n , 1);
+    let reste = mod( n , 1);
     if (reste < 0.5) {
         n -= reste;
     } else if (reste >= 0.5) {
@@ -32,7 +32,7 @@ function ceil(n) {
         neg = true;
     }
 
-    reste =  mod(n , 1);
+    let reste =  mod(n , 1);
     if (reste > 0) {
         n += (1 - reste);
     }
@@ -49,7 +49,7 @@ function floor(n) {
         neg = true;
     }
 
-    reste =  mod(n , 1);
+    let reste =  mod(n , 1);
     if (reste > 0) {
         n -= reste;
     }
@@ -66,7 +66,7 @@ function trunc(n) {
         neg = true;
     }
 
-    reste =  mod(n , 1);
+    let reste =  mod(n , 1);
     if (reste > 0) {
         n -= reste;
     }
