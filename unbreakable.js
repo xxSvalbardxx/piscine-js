@@ -6,7 +6,7 @@ const split = (str, delim) => {
         if (str[i] !== delim) {
             word += str[i];
         } else {
-            arr.push(word);
+            arr.push(word + ", ");
             word = "";
         }
     }
@@ -27,12 +27,5 @@ const join = (arr, concatStr) => {
 
 // const same as split but work with multiple characters as delimiter
 
-const sum = (arr) => {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
-    return sum;
-}
 
 console.log(split('ggg - ddd - b', ' - '));
