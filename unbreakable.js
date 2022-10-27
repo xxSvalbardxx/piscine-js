@@ -1,7 +1,7 @@
 const split = (str, delim) => {
     let arr = [];
     let word = "";
-    str.replaceAll(delim, " ");
+    str = str.replaceAll(delim, " ");
     for (let i = 0; i < str.length; i++) {
         if (str[i] !== delim) {
             word += str[i];
@@ -35,4 +35,4 @@ const sum = (arr) => {
     return sum;
 }
 
-
+console.log(split('ggg - ddd - b', ' - '));
