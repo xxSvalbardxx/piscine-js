@@ -1,5 +1,5 @@
 const reverse = (str) => {
-    Arr = false;
+    let Arr = false;
     if (Array.isArray(str)) {
         Arr = true;
     }
