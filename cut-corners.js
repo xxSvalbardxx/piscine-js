@@ -17,7 +17,6 @@ function round(n) {
     return n;
 }
 /*
-console.log(round(0.2))
 console.log(round(0.5))
 console.log(round(0.8))
 console.log(round(-0.2))
