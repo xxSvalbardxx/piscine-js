@@ -2,17 +2,20 @@ const split = (str, delim) => {
     let arr = [];
     let word = "";
     str = str.replaceAll(delim, " ");
+    delim = " ";
     for (let i = 0; i < str.length; i++) {
-        if (str[i] !== delim) {
+        if (str[i] != delim) {
             word += str[i];
         } else {
             arr.push(word);
             word = "";
         }
+
     }
     arr.push(word);
     return arr;
 }
+console.log(split('ggg - ddd - b', ' - '));
 
 const join = (arr, concatStr) => {
     let str = "";
@@ -28,4 +31,3 @@ const join = (arr, concatStr) => {
 // const same as split but work with multiple characters as delimiter
 
 
-console.log(split('ggg - ddd - b', ' - '));
