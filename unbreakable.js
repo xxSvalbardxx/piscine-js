@@ -1,8 +1,5 @@
-const split = (str, delim) => {
-    if ((str[0] == "\'") && (str[str.length - 1] == "\'")) {
-        str[0] = "";
-        str[str.length - 1] = "";
-    }
+const split = (str= "", delim) => {
+   
     let arr = [];
     let word = "";
     str = str.replaceAll(delim, " ");
@@ -12,16 +9,21 @@ const split = (str, delim) => {
         if (str[i] != delim) {
             word += str[i];
         } else {
-            arr.push(word);
+            if (word != ""){
+                arr.push(word);
+            }
             word = "";
         }
 
     }
-    arr.push(word);
+    if (word != ""){
+        arr.push(word);
+    }
+    
     return arr;
 }
 
-console.log(split('ggg - ddd - b', ' - '));
+console.log(split('Riad', ''));
 
 const join = (arr, concatStr) => {
     let str = "";
