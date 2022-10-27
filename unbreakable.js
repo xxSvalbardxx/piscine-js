@@ -1,5 +1,7 @@
 const split = (str, delim) => {
-    if (typeof str === "string") {
+    if ((str[0] == "\'") && (str[str.length - 1] == "\'")) {
+        str = str.slice(1, str.length - 1);
+    }
     let arr = [];
     let word = "";
     str = str.replaceAll(delim, " ");
@@ -17,7 +19,7 @@ const split = (str, delim) => {
     arr.push(word);
     return arr;
 }
-}
+
 console.log(split('ggg - ddd - b', ' - '));
 
 const join = (arr, concatStr) => {
