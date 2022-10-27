@@ -1,6 +1,6 @@
 const split = (str, delim) => {
    
-    newDelim = delim;
+    let newDelim = delim;
     let arr = [];
     let word = "";
     console.log(str)
@@ -26,8 +26,7 @@ const split = (str, delim) => {
     }
     return arr;
 }
-console.log(split('ee,ff,g,', ','));
-console.log(split('Riad', ''));
+
 
 const join = (arr, concatStr) => {
     let str = "";
