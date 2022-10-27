@@ -1,6 +1,7 @@
 const split = (str, delim) => {
     let arr = [];
     let word = "";
+    str.replaceAll(delim, " ");
     for (let i = 0; i < str.length; i++) {
         if (str[i] !== delim) {
             word += str[i];
@@ -23,4 +24,15 @@ const join = (arr, concatStr) => {
     }
     return str;
 }
+
+// const same as split but work with multiple characters as delimiter
+
+const sum = (arr) => {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
 
