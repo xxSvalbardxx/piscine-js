@@ -24,6 +24,3 @@ const join = (arr, concatStr) => {
     return str;
 }
 
-
-console.log(split("hello world", " "));
-console.log(join(["hello", "world"], " "));
