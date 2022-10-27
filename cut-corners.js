@@ -1,26 +1,34 @@
+// ajouter des puissances de 10 de manière dégressive jusqu'a l'unité; puis verif Apres la virgule si > 0.5 alors +1. 
+
 function round(n) {
     let neg = false; 
     if (n < 0) {
         n = -n;
         neg = true;
     }
-
-    let reste = mod( n , 1);
-    if (reste < 0.5) {
-        n -= reste;
-    } else if (reste >= 0.5) {
-        n += (1 - reste);
+    let i = 0;
+    for (i = 0; i < n-1;) {
+        if (i + 10000000000 < n) i += 10000000000;
+        else if (i + 1000000000 < n) i += 1000000000;
+        else if (i + 100000000 < n) i += 100000000;
+        else if (i + 10000000 < n) i += 10000000;
+        else if (i + 1000000 < n) i += 1000000;
+        else if (i + 100000 < n) i += 100000;
+        else if (i + 10000 < n) i += 10000;
+        else if (i + 1000 < n) i += 1000;
+        else if (i + 100 < n) i += 100;
+        else if (i + 10 < n) i += 10;
+        else i++;
+    }
+    reste = n - i;
+    if (reste >= 0.5) {
+        i += 1;
     }
     if (neg) {
-        n = -n;
+        i = -i;
     }
-    return n;
+    return i;
 }
-/*
-console.log(round(-0.2))
-console.log(round(-0.5))
-console.log(round(-0.8))
-*/
 
 function ceil(n) {
     let neg = false; 
@@ -29,7 +37,23 @@ function ceil(n) {
         neg = true;
     }
 
-    let reste =  mod(n , 1);
+    let i = 0;
+    for (i = 0; i < n-1;) {
+        if (i + 10000000000 < n) i += 10000000000;
+        else if (i + 1000000000 < n) i += 1000000000;
+        else if (i + 100000000 < n) i += 100000000;
+        else if (i + 10000000 < n) i += 10000000;
+        else if (i + 1000000 < n) i += 1000000;
+        else if (i + 100000 < n) i += 100000;
+        else if (i + 10000 < n) i += 10000;
+        else if (i + 1000 < n) i += 1000;
+        else if (i + 100 < n) i += 100;
+        else if (i + 10 < n) i += 10;
+        else i++;
+    }
+    reste = n - i;
+
+   
     if (reste > 0) {
         n += (1 - reste);
     }
@@ -46,7 +70,21 @@ function floor(n) {
         neg = true;
     }
 
-    let reste =  mod(n , 1);
+    let i = 0;
+    for (i = 0; i < n-1;) {
+        if (i + 10000000000 < n) i += 10000000000;
+        else if (i + 1000000000 < n) i += 1000000000;
+        else if (i + 100000000 < n) i += 100000000;
+        else if (i + 10000000 < n) i += 10000000;
+        else if (i + 1000000 < n) i += 1000000;
+        else if (i + 100000 < n) i += 100000;
+        else if (i + 10000 < n) i += 10000;
+        else if (i + 1000 < n) i += 1000;
+        else if (i + 100 < n) i += 100;
+        else if (i + 10 < n) i += 10;
+        else i++;
+    }
+    reste = n - i;
     if (reste > 0) {
         n -= reste;
     }
@@ -63,7 +101,21 @@ function trunc(n) {
         neg = true;
     }
 
-    let reste =  mod(n , 1);
+    let i = 0;
+    for (i = 0; i < n-1;) {
+        if (i + 10000000000 < n) i += 10000000000;
+        else if (i + 1000000000 < n) i += 1000000000;
+        else if (i + 100000000 < n) i += 100000000;
+        else if (i + 10000000 < n) i += 10000000;
+        else if (i + 1000000 < n) i += 1000000;
+        else if (i + 100000 < n) i += 100000;
+        else if (i + 10000 < n) i += 10000;
+        else if (i + 1000 < n) i += 1000;
+        else if (i + 100 < n) i += 100;
+        else if (i + 10 < n) i += 10;
+        else i++;
+    }
+    reste = n - i;
     if (reste > 0) {
         n -= reste;
     }
@@ -72,22 +124,7 @@ function trunc(n) {
     }
     return n;
 }
-function mod(a, b){
-    var negative = false;
-    if(a < 0){
-        negative = true;
-        a = -a;
-    }
-    if (b < 0){
-        b = -b;
-    }
-    var count = 0;
-    while(a >= b){
-        a -= b;
-        count++;
-    }
-    if(negative){
-        return -a;
-    }
-    return a;
-}
+
+
+//console.log(floor(14159265359.3));
+//console.log(Math.floor(14159265359.3)); //14159265359*/
