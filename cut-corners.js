@@ -20,7 +20,7 @@ function round(n) {
         else if (i + 10 < n) i += 10;
         else i++;
     }
-    reste = n - i;
+    let reste = n - i;
     if (reste >= 0.5) {
         i += 1;
     }
@@ -51,7 +51,7 @@ function ceil(n) {
         else if (i + 10 < n) i += 10;
         else i++;
     }
-    reste = n - i;
+    let reste = n - i;
 
    
     if (reste > 0) {
@@ -84,7 +84,7 @@ function floor(n) {
         else if (i + 10 < n) i += 10;
         else i++;
     }
-    reste = n - i;
+    let reste = n - i;
     if (reste > 0) {
         n -= reste;
     }
@@ -115,7 +115,7 @@ function trunc(n) {
         else if (i + 10 < n) i += 10;
         else i++;
     }
-    reste = n - i;
+    let reste = n - i;
     if (reste > 0) {
         n -= reste;
     }
