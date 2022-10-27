@@ -1,7 +1,9 @@
 const split = (str, delim) => {
+    if (typeof str === "string") {
     let arr = [];
     let word = "";
     str = str.replaceAll(delim, " ");
+
     delim = " ";
     for (let i = 0; i < str.length; i++) {
         if (str[i] != delim) {
@@ -14,6 +16,7 @@ const split = (str, delim) => {
     }
     arr.push(word);
     return arr;
+}
 }
 console.log(split('ggg - ddd - b', ' - '));
 
