@@ -7,9 +7,9 @@ function pyramid(char, height) {
         for (var j = 0; j < height - i; j++) {
             spaces += " ";
         }
-        if (i > 0) {
+        
             spaces = spaces.slice(0, -1);
-        }
+        
         
         if (i > 0) {
             chars += char + char;
