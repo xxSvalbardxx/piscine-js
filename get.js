@@ -5,7 +5,7 @@ function get(src, path) {
     for (let i = 0; i < array.length; i++) {
         value = value[array[i]];
     }
-    if (value === undefined) {
+    if (value == undefined) {
         return src;
     }else {
     return value;
