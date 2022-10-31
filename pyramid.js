@@ -5,10 +5,12 @@ function pyramid(char, height) {
     var rslt = "";
     for (var i = 0; i < height; i++) {
         for (var j = 0; j < height - i; j++) {
-            spaces += " ";
+            for (var k = 0; k < char.length; k++) {
+                spaces += " ";
+            }
         }
         
-        spaces = spaces.slice(0, -(char.length));
+        spaces = spaces.slice(0, -1);
         
         if (i > 0) {
             chars += char + char;
@@ -29,4 +31,4 @@ function pyramid(char, height) {
     return rslt;
 }
 
-console.log(pyramid("A", 5));
+console.log(pyramid("AA", 5));
