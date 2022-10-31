@@ -5,4 +5,3 @@ function triangle(char , height) {
         console.log(line);
     }
 }
-triangle("x" , 5);
