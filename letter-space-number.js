@@ -3,8 +3,8 @@ function letterSpaceNumber(str){
     const regexWord =   /[a-zA-Z]\s\d\b/g
     const res = str.match(regexWord)
     if(res){
-        const res = [];
-        return res
+        res.push(arr);
+        return arr
     }
 }
 //  \s matches any whitespace character (equal to [\r \t \n \f \v])
