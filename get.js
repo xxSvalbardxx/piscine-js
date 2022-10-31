@@ -1,13 +1,10 @@
 
-function get(src, path) {
-    let array = path.split(".");
-    let value = src;
-    for (let i = 0; i < array.length; i++) {
-        value = value[array[i]];
-    }
-    if (value === undefined) {
-        return src;
-    }else {
-    return value;
-    }
+const get = (src, path) => {
+    const keys = path.split('.');
+    let res = src;
+    keys.forEach(element => { 
+        if (res == undefined) return res; 
+        res = res[element];
+    });
+    return res;
 }
