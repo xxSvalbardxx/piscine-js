@@ -1,6 +1,6 @@
 function RNA(DNA) {
     let fuck = [];
-    for (i=0 ; i < DNA.length ; i++) { 
+    for (let i=0 ; i < DNA.length ; i++) { 
         if (DNA[i] === "G") {
             fuck.push("C");
         } else if (DNA[i] === "C") {
@@ -20,7 +20,7 @@ function RNA(DNA) {
 
 function DNA(RNA) {
     let tamere = [];
-    for (i=0 ; i < RNA.length ; i++) {
+    for (let i=0 ; i < RNA.length ; i++) {
         if (RNA[i] === "C") {
             tamere.push("G");
         } else if (RNA[i] === "G") {
