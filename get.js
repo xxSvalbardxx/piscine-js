@@ -6,7 +6,7 @@ function get(src, path) {
         value = value[array[i]];
     }
     if (value === undefined) {
-        return undefined;
+        return src;
     }else {
     return value;
     }
