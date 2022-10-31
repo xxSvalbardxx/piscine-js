@@ -8,8 +8,7 @@ function pyramid(char, height) {
             spaces += " ";
         }
         
-            spaces = spaces.slice(0, -1);
-        
+        spaces = spaces.slice(0, -(char.length));
         
         if (i > 0) {
             chars += char + char;
