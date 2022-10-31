@@ -5,6 +5,7 @@ function triangle(char , height) {
         if (i < height - 1) {
             line += '\n';
         }
-        return line;
+        
     }
+    return line;
 }
