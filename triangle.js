@@ -1,7 +1,8 @@
-function triangle() {
+function triangle(char , height) {
     var line = "";
-    for (var i = 0; i < 7; i++) {
-        line += "#";
+    for (var i = 0; i < height; i++) {
+        line += char;
         console.log(line);
     }
 }
+triangle("x" , 5);
