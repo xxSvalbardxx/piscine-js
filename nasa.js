@@ -11,4 +11,5 @@ function nasa(n) {
             string += (i + " ");
         }
     }
+    return string;
 }
