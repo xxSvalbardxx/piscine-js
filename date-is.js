@@ -1,5 +1,6 @@
 function isValid(date) {
-  return date instanceof Date && !isNaN(date);
+    console.log(date)
+  return !isNaN(date);
 }
 function isAfter(date, dateToCompare) {
   return isValid(date) && isValid(dateToCompare) && date > dateToCompare;
@@ -14,3 +15,5 @@ function isPast(date) {
   return isValid(date) && date < new Date();
 }
 
+console.log(isValid(new Date()));
+console.log(isValid(Date.now()));
