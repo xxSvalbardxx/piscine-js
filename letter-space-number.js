@@ -23,4 +23,3 @@ function letterSpaceNumber(str) {
     }
 }
 */
-letterSpaceNumber('He is 8 or 9 years old, not 10.');
