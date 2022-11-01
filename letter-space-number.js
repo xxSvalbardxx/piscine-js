@@ -2,7 +2,7 @@ function letterSpaceNumber(str){
 
     const regex = /[a-zA-Z]\s\d\b/g
     const rslt = str.match(regex)
-    if (rslt = null){
+    if (rslt == null){
         const rslt = []
         return rslt
     }
