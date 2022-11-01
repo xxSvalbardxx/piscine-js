@@ -1,9 +1,12 @@
 function letterSpaceNumber(str){
-    
+
     const regex = /[a-zA-Z]\s\d\b/g
     const rslt = str.match(regex)
+    if (rslt = null){
+        const rslt = []
+        return rslt
+    }
     return rslt
-    
 }
 //  \s matches any whitespace character (equal to [\r \t \n \f \v])
 //  \d matches any digit (equal to [0-9])
