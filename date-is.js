@@ -1,8 +1,6 @@
 function isValid(date) {
-    if (date === Date.now()){
-        return true
-    }
-  return date instanceof Date && !isNaN(date);
+    
+  return !isNaN(date);
 }
 function isAfter(date, dateToCompare) {
   return isValid(date) && isValid(dateToCompare) && date > dateToCompare;
@@ -16,6 +14,3 @@ function isFuture(date) {
 function isPast(date) {
   return isValid(date) && date < new Date();
 }
-
-console.log(isValid(new Date()));
-console.log(isValid(Date.now()));
