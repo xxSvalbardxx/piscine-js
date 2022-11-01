@@ -14,6 +14,3 @@ function isFuture(date) {
 function isPast(date) {
   return isValid(date) && date < new Date();
 }
-
-console.log(isValid(new Date()));
-console.log(isValid(Date.now()));
