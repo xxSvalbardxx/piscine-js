@@ -4,7 +4,8 @@ function isFriday(date) {
 function isWeekend(date) {
   return date.getDay() === 0 || date.getDay() === 6;
 }
-function isLeapYear(year) {
+function isLeapYear(date) {
+  let year = date.getFullYear();
   return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 }
 function isLastDayOfMonth(date) {
