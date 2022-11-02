@@ -1,11 +1,12 @@
 function matchCron(cron, date) {
 
     let cronArr = cron.split(' ')
-    let cronMin = cronArr[0]
+
+    let cronMin = cronArr[0] //
     let cronHour = cronArr[1]
     let cronDay = cronArr[2]
     let cronMonth = cronArr[3]
-    let cronWeek = cronArr[4]
+    let cronDayOfWeek = cronArr[4]
 
     let dateMin = date.getMinutes()
     let dateHour = date.getHours()
@@ -13,27 +14,29 @@ function matchCron(cron, date) {
     let dateMonth = date.getMonth() + 1
     let dateWeek = date.getDay()
 
-    if (cronMin === '*') {
+    if (cronMin == '*') {
         cronMin = dateMin
     }
-    if (cronHour === '*') {
+    if (cronHour == '*') {
         cronHour = dateHour
     }
-    if (cronDay === '*') {
+    if (cronDay == '*') {
         cronDay = dateDay
     }
-    if (cronMonth === '*') {
+    if (cronMonth == '*') {
         cronMonth = dateMonth
     }
-    if (cronWeek === '*') {
-        cronWeek = dateWeek
+    if (cronDayOfWeek == '*') {
+        cronDayOfWeek = dateWeek
     }
 
-    if (cronMin === dateMin && cronHour === dateHour && cronDay === dateDay && cronMonth === dateMonth && cronWeek === dateWeek) {
+    if (cronMin == dateMin && cronHour == dateHour && cronDay == dateDay && cronMonth == dateMonth && cronDayOfWeek == dateWeek) {
+        console.log('true')
         return true
     } else {
+        console.log('false')
         return false
     }
-
-
 }
+
+matchCron('* * * * 1', new Date('2020-06-01 00:00:00')); // true
