@@ -1,14 +1,4 @@
-console.log(citiesOnly([
-    {
-      city: 'Los Angeles',
-      temperature: '  101 °F   ',
-    },
-    {
-      city: 'San Francisco',
-      temperature: ' 84 ° F   ',
-    },
-  ]))
-// ['Los Angeles', 'San Francisco']
+
 function citiesOnly (city) {
     return city.map(function (city) {
         return city.city
@@ -16,9 +6,6 @@ function citiesOnly (city) {
 }
 
 
-console.log(upperCasingStates(['alabama', 'new jersey']))
-// ['Alabama', 'New Jersey']
-// must uppercase the first letter of each word
 function upperCasingStates(states) {
     return states.map(function (states) {
         let words = states.split(' ')
@@ -30,9 +17,6 @@ function upperCasingStates(states) {
 }
 
 
-console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F']));
-// [20, 15, -4]
-
 function fahrenheitToCelsius (temp) {
     return temp.map(function (temp) {
         let celsius = Math.round((parseInt(temp) - 32) * 5 / 9)
@@ -41,13 +25,6 @@ function fahrenheitToCelsius (temp) {
 }
 
 
-console.log(trimTemp([{ city: 'Los Angeles', temperature: '  101 °F   ' },
-{ city: 'San Francisco', temperature: ' 84 ° F   ' },
-]))
-/* -> [
-{ city: 'Los Angeles', temperature: '101°F' },
-{ city: 'San Francisco', temperature: '84°F' },
-] */
 
 function trimTemp(obj) {
     return obj.map(function (obj) {
@@ -56,14 +33,6 @@ function trimTemp(obj) {
     })
 }
 
-console.log(tempForecasts([
-    {
-      city: 'Pasadena',
-      temperature: ' 101 °F',
-      state: 'new jersey',
-      region: 'West',
-    },
-  ])) // -> ['38°Celsius in Pasadena, New Jersey']
 
 function tempForecasts(obj) {
     return obj.map(function (obj) {
