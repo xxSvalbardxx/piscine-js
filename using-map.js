@@ -21,7 +21,7 @@ console.log(upperCasingStates(['alabama', 'new jersey']))
 // must uppercase the first letter of each word
 function upperCasingStates(states) {
     return states.map(function (states) {
-        words = states.split(' ')
+        let words = states.split(' ')
         for (var i = 0; i < words.length; i++) {
             words[i] = words[i][0].toUpperCase() + words[i].substr(1)
         }
@@ -35,7 +35,7 @@ console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F']));
 
 function fahrenheitToCelsius (temp) {
     return temp.map(function (temp) {
-        celsius = Math.round((parseInt(temp) - 32) * 5 / 9)
+        let celsius = Math.round((parseInt(temp) - 32) * 5 / 9)
         return (celsius + '°C')
     })
 }
@@ -51,7 +51,7 @@ console.log(trimTemp([{ city: 'Los Angeles', temperature: '  101 °F   ' },
 
 function trimTemp(obj) {
     return obj.map(function (obj) {
-        t = obj.temperature.replaceAll(' ', '')
+        let t = obj.temperature.replaceAll(' ', '')
         return t
     })
 }
@@ -67,14 +67,14 @@ console.log(tempForecasts([
 
 function tempForecasts(obj) {
     return obj.map(function (obj) {
-        t = obj.temperature.replaceAll(' ', '')
-        celsius = Math.round((parseInt(t) - 32) * 5 / 9)
-        words = obj.state.split(' ')
+        let t = obj.temperature.replaceAll(' ', '')
+        let celsius = Math.round((parseInt(t) - 32) * 5 / 9)
+        let words = obj.state.split(' ')
         for (var i = 0; i < words.length; i++) {
             words[i] = words[i][0].toUpperCase() + words[i].substr(1)
         }
-        state = words.join(' ')
-        return (celsius + '°Celsius in ' + obj.city + ', ' + state)
+        let etat = words.join(' ')
+        return (celsius + '°Celsius in ' + obj.city + ', ' + etat)
     })
 }
 
