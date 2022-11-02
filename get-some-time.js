@@ -53,7 +53,7 @@ function firstDayWeek(week,year){
     
     let time = new Date(anne);
     
-    let day = (week)*7*24
+    let day = (week-1)*7*24
     time.setHours(day)
     
     function formatDate(time) {
@@ -70,7 +70,7 @@ function firstDayWeek(week,year){
     function getWeekDay(date) {
         let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         
-        return days[date.getDay()-1];
+        return days[date.getDay()];
 
     }
     
