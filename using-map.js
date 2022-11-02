@@ -19,7 +19,7 @@ function upperCasingStates(states) {
 
 function fahrenheitToCelsius (temp) {
     return temp.map(function (temp) {
-        let celsius = Math.round(((parseInt(temp) - 32) * 5 / 9)-1)
+        let celsius = Math.round(((parseInt(temp) - 32) * 5 / 9))
         return (celsius + '°C')
     })
 }
@@ -37,7 +37,7 @@ function trimTemp(obj) {
 function tempForecasts(obj) {
     return obj.map(function (obj) {
         let t = obj.temperature.replaceAll(' ', '')
-        let celsius = Math.round(((parseInt(t) - 32) * 5 / 9)-1)
+        let celsius = Math.round(((parseInt(t) - 32) * 5 / 9))
         let words = obj.state.split(' ')
         for (var i = 0; i < words.length; i++) {
             words[i] = words[i][0].toUpperCase() + words[i].substr(1)
