@@ -19,21 +19,20 @@ function filter5Vowels(arr){
 }
 // is there multiple time the same voyel in the state name?
 
-function filter1DistinctVowel(arr){
-    return arr.filter(state => {
-    
-    let regex = state.match(/[aeiou]/gi);
-    let flag = false;
-    for(let i=0;i<regex.length-1;i++){
-        for(let j=i+1;j<regex.length;j++){
-            if(regex[i].toUpperCase()!==regex[j].toUpperCase()){
-                flag - false
-            }else{
-                flag = true
+const filter1DistinctVowel = (arr) => {
+    return arr.filter(str => { 
+        let vowels = str.match(/[aeiou]/gi);
+        let flag = false; 
+        for(let i=0;i<vowels.length-1;i++){
+            for(let j=i+1;j<vowels.length;j++){
+                if(vowels[i].toUpperCase()!==vowels[j].toUpperCase()){
+                    flag = false;
+                    break;
+                }
             }
+            flag = true;
         }
-        return flag
-    }
+        return flag;
     });
 }
 
