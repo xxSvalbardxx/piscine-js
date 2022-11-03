@@ -45,6 +45,6 @@ function multiFilter(arrOfObj){
         let tag = obj.tag;
         let region = obj.region;
     
-        return capital.length > 8 && !name[0].match(/[aeiou]/i) && tag.match(/[aeiou]/gi) && region !== 'South';
+        return capital.length >= 8 && !name[0].match(/[aeiou]/i) && tag.match(/[aeiou]/i) && region !== 'South';
     });
 }
