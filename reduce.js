@@ -18,7 +18,7 @@ function reduce(arr = [], func = (val, index, arr)){
     }
 
     let rslt = arr[0];
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length- 1; i++) {
         rslt = func(rslt, arr[i]);
     }
     return rslt;
