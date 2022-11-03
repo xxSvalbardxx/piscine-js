@@ -1,5 +1,5 @@
 function fold(arr, func, accumulateur){
-    newArr = [];
+    let newArr = [];
     for (let i = 0 ; i < arr.lenght ; i++) {
         newArr.push(func(arr[i], accumulateur));
     }
@@ -7,7 +7,7 @@ function fold(arr, func, accumulateur){
 }
 
 function foldRight(arr, func, accumulateur){
-    newArr = [];
+    let newArr = [];
     for (let i = arr.lenght-1 ; i > 0 ; i--) {
         newArr.push(func(arr[i], accumulateur));
     }
