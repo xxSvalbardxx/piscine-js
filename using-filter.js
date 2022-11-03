@@ -20,7 +20,7 @@ function filter5Vowels(arr){
 // is there multiple time the same voyel in the state name?
 
 function filter1DistinctVowel(arr){
-    return arr.filter(function(state){
+    return arr.filter(state => {
     
     let regex = state.match(/[aeiou]/gi);
     let flag = false;
@@ -36,6 +36,7 @@ function filter1DistinctVowel(arr){
     }
     });
 }
+
 
 function multiFilter(arrOfObj){
     return arrOfObj.filter(obj => {
