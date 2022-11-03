@@ -1,5 +1,5 @@
 function longWords(words) {
-    shortWords = 0;   
+    let shortWords = 0;   
     words.map(function(word) {
         if (word.length < 5){
             shortWords+=1;
@@ -11,7 +11,7 @@ function longWords(words) {
     return true
 }
 function oneLongWord(words) {
-    longWords = 0;
+    let longWords = 0;
     words.map(function(word) {
         if (word.length >= 10){
             longWords+=1;
@@ -23,7 +23,7 @@ function oneLongWord(words) {
     return false
 }
 function noLongWords(words) {
-    longWords = 0;
+    let longWords = 0;
     words.map(function(word) {
         if (word.length >= 7){
             longWords+=1;
