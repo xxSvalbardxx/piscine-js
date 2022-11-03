@@ -1,16 +1,17 @@
 function map(arr, func){
-    let newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        newArr.push(func(arr[i]));
+    let newMap = [];
+    for (let i = 0; i < arr.length; i++){
+        newMap.push(func(arr[i], i, arr)); // func(element, index, array)
     }
-    return newArr;
+    return newMap;
 }
+
 
 // flatMap must not use map or flat or flatMap 
 function flatMap(arr, func){
     let newArr = [];
     for (let i = 0; i < arr.length; i++) {
-        newArr = newArr.concat(func(arr[i]));
+        newArr = newArr.concat(func(arr[i], i, arr));
     }
     return newArr;
 }
