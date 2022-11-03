@@ -39,7 +39,7 @@ const filter1DistinctVowel = (arr) => {
 
 
 function multiFilter(arrOfObj){
-    return arrOfObj.filter(obj => {
+    return arrOfObj.filter(function(obj) {
         let capital = obj.capital;
         let name = obj.name;
         let tag = obj.tag;
