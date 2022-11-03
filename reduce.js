@@ -23,7 +23,7 @@ function reduce(arr = [], func = (val, index, arr)){
     }
     return rslt;
 }
-function reduceRight(arr = [], func = (val, index, arr), acc=0){
+function reduceRight(arr = [], func = (val, index, arr)){
     if (arr.length < 2){
         return Error("Array is not long enough");
     }
