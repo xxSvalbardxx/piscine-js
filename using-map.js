@@ -49,7 +49,20 @@ function tempForecasts(obj) {
         }
         let etat = words.join(' ')
         return (celsius + '°Celsius in ' + obj.city + ', ' + etat)
+        
     })
 }
 
-   
+/*
+const tempForecasts = (arr) => {
+    return arr.map(obj => {
+
+        let temp = Math.floor((parseInt(obj.temperature) - 32) * (5/9));
+        let city = upperCasingStates([obj.city])[0];
+        let state = upperCasingStates([obj.state])[0];
+
+        return `${temp}°Celsius in ${city}, ${state}`;
+        
+    });
+}
+*/
