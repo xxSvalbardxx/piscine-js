@@ -12,10 +12,10 @@ let year = 31557600;
 
 function dogYears(planet , age){
 
-    age = age / year
+    age = age / year // age in earth years
     let period = planets[planet]
     age = age / period
     age = age * 7
-    return Math.round(age * 100) / 100;
-}
 
+    return Math.round(age * 100) / 100 ; // round to 2 decimals
+}
