@@ -13,18 +13,21 @@ function foldRight(arr = [], func = (val, index, arr), acc=0){
     return rslt;
 }
 function reduce(arr = [], func = (val, index, arr), acc=0){
-    let newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        newArr.push(func(acc, arr[i], i, arr)); // func(accumulateur, element, index, array) => func(0, 1, 0, [1,2,3]) => func(1, 2, 1, [1,2,3]) => func(3, 3, 2, [1,2,3]) => func(6, undefined, 3, [1,2,3])
-        acc = newArr[i];
+    rslt = acc;
+    if (arr.length < 2){
+        return Error("Array is not long enough");
     }
-    return newArr;
+    for (let i = 0; i < arr.length; i++) {
+        acc = func(acc, arr[i], i, arr); // func(accumulateur, element, index, array) => func(0, 1, 0, [1,2,3]) => func(1, 2, 1, [1,2,3]) => func(3, 3, 2, [1,2,3]) => func(6, undefined, 3, [1,2,3])
+
+    }
+    return rslt;
 }
 function reduceRight(arr = [], func = (val, index, arr), acc=0){
-    let newArr = [];
+    rslt = acc;
     for (let i = arr.length - 1; i >= 0; i--) {
-        newArr.push(func(acc, arr[i], i, arr));
-        acc = newArr[arr.length - 1 - i];
+        acc = func(acc, arr[i], i, arr);
+        
     }
-    return newArr;
+    return rslt;
 }
