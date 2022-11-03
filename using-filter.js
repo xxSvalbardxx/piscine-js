@@ -39,12 +39,12 @@ const filter1DistinctVowel = (arr) => {
 
 
 function multiFilter(arrOfObj){
-    return arrOfObj.filter(function(obj) {
+    return arrOfObj.filter(obj => {
         let capital = obj.capital;
         let name = obj.name;
         let tag = obj.tag;
         let region = obj.region;
     
-        return capital.length > 8 && filterStartVowel(name) && tag.match(/[aeiou]/i) && region !== 'South';
+        return capital.length > 8 && !name[0].match(/[aeiou]/i) && tag.match(/[aeiou]/i) && region !== 'South';
     });
 }
