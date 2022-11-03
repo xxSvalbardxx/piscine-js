@@ -14,7 +14,7 @@ function filterStartVowel(arr){
 
 function filter5Vowels(arr){
     return arr.filter(function(state){
-        return state.match(/[aeiou]/gi).length === 5; // g for global, i for case insensitive
+        return state.match(/[aeiou]/gi).length >= 5; // g for global, i for case insensitive
     });
 }
 // is there multiple time the same voyel in the state name?
