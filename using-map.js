@@ -24,12 +24,17 @@ function fahrenheitToCelsius (temp) {
     })
 }
 
-
+trimTemp([
+    { city: 'Los Angeles', temperature: '  101 °F   ' },
+    { city: 'San Francisco', temperature: ' 84 ° F   ' },
+  ])
 
 function trimTemp(obj) {
     return obj.map(function (obj) {
         let t = obj.temperature.replaceAll(' ', '')
-        return t
+        obj['temperature'] = t
+        console.log(obj)
+        return obj
     })
 }
 
