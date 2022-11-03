@@ -17,7 +17,7 @@ function reduce(arr, func ){
         return Error("Array is not long enough");
     }
     let rslt = arr[0];
-    for (let i = 1; i < arr.length- 1; i++) {
+    for (let i = 1; i < arr.length; i++) {
         rslt = func(rslt, arr[i]);
     }
     return rslt;
