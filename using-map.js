@@ -1,13 +1,13 @@
 
-function citiesOnly (city) {
-    return city.map(function (city) {
+function citiesOnly (obj) {
+    return obj.map(function (city) {
         return city.city
     })
 }
 
 
-function upperCasingStates(states) {
-    return states.map(function (states) {
+function upperCasingStates(obj) {
+    return obj.map(function (states) {
         let words = states.split(' ')
         for (var i = 0; i < words.length; i++) {
             words[i] = words[i][0].toUpperCase() + words[i].substr(1)

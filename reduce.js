@@ -12,26 +12,24 @@ function foldRight(arr = [], func = (val, index, arr), acc=0){
     }
     return rslt;
 }
-function reduce(arr = [], func = (val, index, arr), acc=0){
-    let newArr = [];
+function reduce(arr = [], func = (val, index, arr)){
     if (arr.length < 2){
         return Error("Array is not long enough");
     }
+
+    let rslt = arr[0];
     for (let i = 0; i < arr.length; i++) {
-        newArr.push(func(acc, arr[i], i, arr)); // func(accumulateur, element, index, array) => func(0, 1, 0, [1,2,3]) => func(1, 2, 1, [1,2,3]) => func(3, 3, 2, [1,2,3]) => func(6, undefined, 3, [1,2,3])
-        acc = newArr[i];
+        rslt = func(rslt, arr[i]);
     }
-    return newArr[newArr.length - 1];
+    return rslt;
 }
 function reduceRight(arr = [], func = (val, index, arr), acc=0){
-    let newArr = [];
     if (arr.length < 2){
         return Error("Array is not long enough");
     }
+    let rslt = arr[arr.length - 1];
     for (let i = arr.length - 1; i >= 0; i--) {
-        newArray(func(acc, arr[i], i, arr));
-        acc = newArr[i];
-        
+        rslt = func(rslt, arr[i]);
     }
-    return newArr[newArr.length - 1];
+    return rslt;    
 }
