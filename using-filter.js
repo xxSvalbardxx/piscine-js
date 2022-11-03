@@ -23,11 +23,12 @@ const filter1DistinctVowel = (arr) => {
     return arr.filter(str => { 
         let vowels = str.match(/[aeiou]/gi);
         let flag = false; 
+        Loop:
         for(let i=0;i<vowels.length-1;i++){
             for(let j=i+1;j<vowels.length;j++){
                 if(vowels[i].toUpperCase()!==vowels[j].toUpperCase()){
                     flag = false;
-                    break;
+                    break Loop;
                 }
             }
             flag = true;
