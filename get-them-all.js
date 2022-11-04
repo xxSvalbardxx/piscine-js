@@ -31,7 +31,7 @@ export function getClassical(){
 export function getActive(){
     var rslt = [];
     var yes = Array.from(document.getElementsByClassName('classical active'));
-    var no = Array.from(!document.querySelectorAll('a.classical:not(.active)'));
+    var no = Array.from(document.querySelectorAll('a.classical:not(.active)'));
     rslt.push(yes);
     rslt.push(no);
     
