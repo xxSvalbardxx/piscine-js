@@ -7,7 +7,7 @@ function mult2(a){
 function add3(a){
     return function (b){
         return function (c){
-            return a*b*c
+            return a+b+c
         }
     } 
 }
