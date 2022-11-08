@@ -4,7 +4,7 @@ export function build(nbrBricks) {
   let bricks = setInterval(function() {
     var brick = document.createElement("div");
     brick.innerHTML = i;
-    brick.className = "brick";
+    
     brick.id = "brick-" + i;
     document.body.appendChild(brick);
     if ((i -2) % 3 == 0) {
