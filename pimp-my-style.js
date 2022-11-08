@@ -27,6 +27,5 @@ export function pimp(){
             if(j == -1){
                 elem.classList.remove('unpimp')
             }
-            
      }
 }
