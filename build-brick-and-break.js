@@ -18,7 +18,7 @@ export function build(nbrBricks) {
 }
 // function repair receives any number of ids. For each id, it retrieves the HTML element, and sets the repaired custom attribute to in progress if it is a brick situated in the middle column, and true if not.
 export function repair(...arg) { // ... is the rest operator that allows to pass any number of arguments
-  for (let i = 0; i < arg.length; i++) {
+  for (let i of arg) {
     let brick = document.getElementById(arg[i]);
 
     let temp = arg[i].replace('brick-', '');
@@ -31,8 +31,6 @@ export function repair(...arg) { // ... is the rest operator that allows to pass
       brick.innerHTML = temp;
     }
   }
-
-  
 }
 // remove the last brick
 export function destroy() {
