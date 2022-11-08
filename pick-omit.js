@@ -22,12 +22,12 @@ function omit(obj, str) {
   if (typeof str == "string") {
     str = [str];
   }
-  let obj2 = {};
+  
   let keys = Object.keys(obj);
   for (let i = 0; i < str.length; i++) {
     keys.forEach((key) => {
       if (str[i] != key) {
-        obj.delete(obj[key]) ;
+        delete obj[key] ;
       }
     });
     
