@@ -11,7 +11,7 @@ export function build(nbrBricks) {
       brick.dataset.foundation = true;
     }
     i++;
-    if (i == nbrBricks) {
+    if (i > nbrBricks) {
       clearInterval(bricks); // stop the interval 
     }
   }, 100);
@@ -34,10 +34,14 @@ export function repair(...arg) { // ... is the rest operator that allows to pass
 }
 // remove the last brick
 export function destroy() {
-  var brick = document.querySelector(".brick:last-child");
-  brick.remove();
-  /*
-   let elements = document.querySelectorAll('div[id^="brick"]')
+  
+  let elements = document.querySelectorAll('div[id^="brick"]')
     elements[elements.length-1].remove()
+  
+/*
+(only if the bricks have a class)
+var brick = document.querySelector(".brick:last-child");
+  brick.remove();
+
     */
 }
