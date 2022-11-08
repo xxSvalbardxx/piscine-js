@@ -23,8 +23,10 @@ export function repair(arg) {
     let brick = document.getElementById(arg[i]);
     if (brick.hasAttribute("foundation")) {
       brick.dataset.repaired = true;
+      brick.innerHTML = "i";
     } else {
       brick.dataset.repaired = "in progress";
+      brick.innerHTML = "i";
     }
   }
 
