@@ -11,10 +11,10 @@ export function build(nbrBricks) {
       brick.dataset.foundation = true;
     }
     i++;
-    if (i > nbrBricks) {
+    if (i == nbrBricks) {
       clearInterval(bricks); // stop the interval 
     }
-  }, 100 * i);
+  }, 100);
 }
 // function repair receives any number of ids. For each id, it retrieves the HTML element, and sets the repaired custom attribute to in progress if it is a brick situated in the middle column, and true if not.
 export function repair(...arg) { // ... is the rest operator that allows to pass any number of arguments
