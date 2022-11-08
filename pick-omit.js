@@ -23,7 +23,7 @@ function omit(obj, str) {
     str = [str];
   }
   let obj2 = { ...obj };
-  for (key of str) {
+  for (let key of str) {
     delete obj2[key];
   }
   return obj2;
