@@ -25,10 +25,9 @@ export function repair(...arg) { // ... is the rest operator that allows to pass
 
     if (temp % 3 === 2) {
       brick.setAttribute('data-repaired',"in progress")
-      brick.innerHTML = temp;
     } else {
       brick.setAttribute('data-repaired',"true")
-      brick.innerHTML = temp;
+      
     }
   }
 }
