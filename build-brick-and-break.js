@@ -24,7 +24,7 @@ export function repair(...arg) { // ... is the rest operator that allows to pass
 
     let temp = arg[i].replace("brick-", "");
 
-    if (temp % 3 == 2) {
+    if (temp % 3 === 2) {
       brick.setAttribute('data-repaired',"in progress")
       brick.innerHTML = temp;
     } else {
