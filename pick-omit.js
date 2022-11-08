@@ -27,11 +27,11 @@ function omit(obj, str) {
   for (let i = 0; i < str.length; i++) {
     keys.forEach((key) => {
       if (str[i] != key) {
-        obj2[key] = obj[key];
+        obj.delete(obj[key]) ;
       }
     });
     
-  }return obj2;
+  }return obj;
 }
 
 console.log(pick({ age: 1, agehg: 2, c: 3 }, ["ff","agehg"])); // {a:1}
