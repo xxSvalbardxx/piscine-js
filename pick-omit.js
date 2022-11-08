@@ -33,6 +33,7 @@ function omit(obj, str) {
     
   }return obj;
 }
-
+/*
 console.log(pick({ age: 1, agehg: 2, c: 3 }, ["ff","agehg"])); // {a:1}
 console.log(omit({ a: 1, aa: 2, c: 3 }, ["a"])); // {b:2}
+*/
