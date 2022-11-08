@@ -5,9 +5,8 @@ let j = 14
 let k = 0
 export function pimp(){
     let elem = document.querySelector("button")
-    let mat = Math.floor(i/styles.length) // when up math=0, when down math=1
+    let mat = Math.floor(i/styles.length) // when up math=0, when down math=1 !!! REVOIR Math.floor
     console.log(mat)
-    // console.log(styles.length) == 15
     
         if (mat%2 == 0) { 
             j = 14
