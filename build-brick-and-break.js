@@ -5,7 +5,7 @@ export function build(nbrBricks) {
     var brick = document.createElement("div");
     brick.innerHTML = i;
     
-    brick.id = "brick-" + i;
+    brick.id = 'brick-' + i;
     document.body.appendChild(brick);
     if ((i -2) % 3 == 0) {
       brick.dataset.foundation = true;
@@ -25,9 +25,10 @@ export function repair(...arg) { // ... is the rest operator that allows to pass
 
     if (temp % 3 === 2) {
       brick.setAttribute('data-repaired',"in progress")
+      brick.innerHTML = temp;
     } else {
       brick.setAttribute('data-repaired',"true")
-      
+      brick.innerHTML = temp;
     }
   }
 }
