@@ -16,16 +16,18 @@ const nutritionDB = {
 */
 
 function filterValues(obj, func){
-    return Object.fromEntries(Object.entries(obj).filter(([key, value]) => func(value)));
+
+    return Object.fromEntries(Object.entries(obj).filter(([key, value]) => func(value))); //
     
 }
 
-function mapValues(){
-
+function mapValues(obj, func){
+    return Object.fromEntries(Object.entries(obj).map(([key, value]) => [key, func(value)]));
 }
-function reduceValues(){
-
+function reduceValues(obj, func){
+    return Object.values(obj).reduce(func);
 }
+
 
 const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
 
