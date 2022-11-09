@@ -24,8 +24,8 @@ function filterValues(obj, func){
 function mapValues(obj, func){
     return Object.fromEntries(Object.entries(obj).map(([key, value]) => [key, func(value)]));
 }
-function reduceValues(obj, func){
-    return Object.values(obj).reduce(func);
+function reduceValues(obj, func, acc=0){
+    return Object.values(obj).reduce(func,acc);
 }
 
 
